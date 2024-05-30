@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Web</title>
+
+    <script src="https://kit.fontawesome.com/7a4b62b0a4.js"crossoringin="anonymous"></script>
+    <style>
+        *
+        {
+            margin: 0;  padding: 0;  box-sizing: border-box; 
+        }
+        body
+        {
+            font-family: "Roboto",sans-serif;
+            font-weight: 300;
+            line-height: 1.4;
+             scroll-behavior: smooth;
+            
+        }
+        .logo
+        {
+            top: 0;
+            left: 0;
+            position: absolute;
+           width: 60px;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+        
+        }
+        .logo img
+        {
+            height: 60px;
+          width: 80px;
+          border: 3px solid gray;
+          border-radius:  40%;
+        }
+
+        section
+        {
+            scroll-margin: 50px;
+        }
+    
+        /* section1 */
+         .container
+        {
+          max-width: 1200px;   margin: 0 auto;
+        } 
+         ul
+         {
+            list-style: none;
+         }
+          a
+          {
+            text-decoration: none;    color: white;
+          } 
+          header
+          {
+            background-color:  rgb(18, 18, 18);
+            padding: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+          }
+          .navbar_background h1
+          {
+            font-size: 3rem; 
+            color: rgb(1, 154, 154);
+            font-weight: 600;
+            margin-left: 300px; 
+           
+          }
+
+          nav
+        {
+            display: flex;  justify-content: space-between; position: sticky; align-items: center;
+        }
+        nav ul
+        {
+            display: flex;  gap: 20px;  font-size: 1.3rem; 
+        }
+        nav ul li
+        {
+            border-bottom: 2px solid transparent;
+            transition: 0.3s ease-in-out;
+        }
+        nav ul li:hover
+        {
+            border-bottom: 2px solid white;
+            transition: 0.3s ease-in-out;
+        }
+        /* section 2 */
+        .hero-section
+        {
+            background-image: url("https://media.istockphoto.com/id/896567258/photo/abstract-hand-playing-music-notes-on-smartphone-at-night-background-music-concept-all-on.jpg?s=612x612&w=0&k=20&c=MuagV_whMnCys-9L81ESyQRCM8N6jC6BFXNkPlJ8FDE=");
+            background-size: cover;
+             height: 100vh;
+             display: grid;
+             color: white;
+             place-items: center;
+             text-align: center;
+            
+        } 
+         .background
+        {
+            background: rgba(0,0,0, 0.7);
+            background-size: cover;
+            background-blend-mode: darken;
+            border-radius: 50px;
+        }
+          .hero-section.container
+        {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        .hero-section h2 
+        {
+           font-size: 4rem;
+           color: rgb(155, 155, 159);
+        }
+        .hero-section h3
+        {
+            font-size: 2rem;
+            color: rgb(126, 129, 129);
+        }
+        .hero-section p
+        {
+            font-size: 1.5rem;
+        }
+        /*  Music section  */
+        .music-section
+        {
+            padding: 50px;
+            background-color: rgb(33, 33, 33);
+            color: white;
+        }
+        .music-section .container
+        {
+           display: flex;
+           flex-direction: column;
+           gap: 30px;
+           justify-content: center;
+           align-items: center;
+
+        }
+        .music-section .container h1
+        {
+            font-size: 3rem;
+            
+         }
+         .music-section .container  h4 p
+        {
+            font-size: 2rem;
+            color: rgb(5, 4, 4);
+        }
+        .primari-btn{
+
+            font-size: 1.3rem;
+       font-weight: 300;
+        padding: 8px 20px;
+        vertical-align: middle;
+        border-radius: 20px;
+        background-color: #8a8a8f;
+        color: #000;
+        }
+        
+      /* about section */
+       
+      .about-music
+      {
+         margin: 80px auto;
+        padding-top: 100px;
+        display: grid;
+        place-items: center;
+        gap: 50px;
+        text-align: center;
+        justify-content: center;
+        margin-bottom: 100px;   
+      }
+      .about-music h1{
+        color: #030365;
+        font-size: 2rem;
+       top: 0;
+      }
+      .about-music p
+      {
+        text-align: center;
+        justify-content: center;
+      } 
+      
+ /* gift carde section */
+.gift-section
+{
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 300px  0px;
+    gap: 100px;
+
+}
+.gift-content
+{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.gift-content h1{
+    color: #454548;
+  margin-right: 1200px;
+}
+.secondary-btn
+    {
+        font-size: 1.3rem;
+       font-weight: 300;
+        padding: 8px 20px;
+        vertical-align: middle;
+        border-radius: 10px;
+        border-top-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        background-color: #8a8a8f;
+        color: #000;
+       
+    }
+
+/* footer section */
+footer {
+    background-color: #1a1a1b;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 700px;
+}
+.footer-content p{
+     font-size: 1.5rem;
+}
+ </style>
+</head>
+<body>
+    <!-- section1 -->
+    <header>
+        <nav class="navbar_background">
+       <h1>MyTunes</h1>  
+       <div class="logo"><img src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RW16e0d?ver=055e&q=90&m=6&h=705&w=1253&b=%23FFFFFFFF&f=jpg&o=f&p=140&aim=true"alt="logo"></div>
+
+       <ul>
+
+        <a href="#hero"><li>Overview</li></a>
+
+        <a href="#music"><li>Music</li></a>
+
+
+        <a href="#about"><li>About</li></a>
+
+       
+        <a href="#gift"><li>Gift Cards</li></a>
+
+  </ul>
+ </nav>
+</header>
+<!-- section 2 -->
+        <main>
+             <section class="hero-section" id="hero">
+             <div class="background firstsection">
+             <h2>MyTunes</h2>
+              <h3>A world of intertairment</h3>
+              <p>The MyTunes music player is a straightforwardz,<br>
+                 command-line-based application designed to provide 
+                 basic music playback functionalities using Python <br>
+                 and the pygame library. The player initializes the 
+                 pygame.mixer module to handle audio playbackensuring<br>
+                that users can listen to their favorite .mp3 files fro
+                a specified directory Upon starting the application,<br>
+                users are presented with a menu offering four primary 
+                options:listing available songs, playing a selected song,<br>
+                 stopping the current playback, and exiting the program. 
+                The MyTunes class encapsulates the core functionality,<br>
+                including methods to list all songs in the designated music folder, 
+                 play a song by loading and playing the selected file via pygame<br>
+                mixer.music.load and pygame.mixer.music
+                </p>
+</div>
+</section>
+</main>
+<!-- srction3 -->
+
+<section class="music-section"id="music">
+    <div class="container">
+        <h1>
+            <span><i class="fa fa-music"></i></span>
+            Music
+        </h1>
+        <h4>
+          ipsum dolor sit amet consectetur 
+         dipisicing elit. Explicabo reprehenderit
+        vel ea nam ab dolore,<br> id quis atque delectus
+         aliquid suscipit magnam nesciunt labore! Velit nihil harum iusto soluta.</h4>
+         <button class="primari-btn">Start Your Trail Now</button>
+         <p>Explicabo reprehenderit dipisicing elit</p>
+         <div class="ipad-iphone-img">
+            <img src="https://cdsassets.apple.com/live/7WUAS350/images/ios/locale/tr-tr/ios-16-ipad-pro-iphone13-pro-group-facetime-hero.png"alt="phone img"height="600px"width="900px"/>
+         </div>
+
+    </div>
+</section>
+
+<section class="about-music container"id="about">
+   <h1>A world of intertairment</h1>
+    <p> aliquid suscipit magnam nesciunt labore! Velit nihil harum iusto soluta.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo error
+        similique eveniet harum sunt eaque neque expedita cum voluptatibus exercitationem fugit,
+        quia obcaecati sint natus inventore assumenda nulla, libero aliquid.  <br></p>
+    
+  
+    <div class="mac-img">
+        <img src="https://www.thetechedvocate.org/wp-content/uploads/2023/06/best-itunes-alternatives-for-mac-main-660x400@2x.webp"alt="macbook"height="700px"width="1500px"/>
+</div>
+</section>
+
+             <!-- section 6 -->
+<section class="gift-section "id="gift">
+<div class="gift-card">
+  <img src="https://www.encompassinsurance.com/resources/EncompassInsurance/images/insurance-resources/articles/gift-card-390x230.jpg?v=60e5dc97-8013-82cc-7616-a206dc53f407"alt="gift card"/> -->
+
+ </div>
+ <div class="gift-content">
+    <h1>Gift Card</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, ipsa? 
+        Officiis, iusto ut, dolorum consectetur ipsum quo iure 
+        rem laboriosam alias magni adipisci provident quam. Maxime
+        doloribus molestias excepturi sapiente.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, ipsa? 
+        Officiis, iusto ut, dolorum consectetur ipsum quo iure 
+        rem laboriosam alias magni adipisci provident quam. Maxime
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, ipsa? 
+        Officiis, iusto ut, dolorum consectetur ipsum quo iure 
+        rem laboriosam alias magni adipisci provident quam. Maxime</p>
+        <p>Already have an orang MyTunes Music Gift Card</p>
+        <hr>
+       <div>
+            <button class="secondary-btn">Readeem</button>
+ </div>
+</div>
+</section>
+
+<!-- footer section -->
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Music Website. All Rights Reserved.</p>
+           
+        </div>
+    </footer>
+</body>
+</html>
